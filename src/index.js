@@ -11,6 +11,10 @@ import Home from './pages/Home';
 import Contact from './pages/Contact';
 import Layout from './pages/Layout';
 
+import DemoUseState from './HookUseState';
+import { DemoUseStateWithObject } from './HookUseState';
+import HookUseEffect from './HookUseEffect';
+
 // first react 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -93,6 +97,19 @@ export default function AppRounter() {
   )
 }
 rounter.render(<AppRounter />);
+
+// Hooks
+// useState
+const demoUseStateHook = ReactDOM.createRoot(document.getElementById("demo-use-state-hook"));
+demoUseStateHook.render(<DemoUseState/>);
+
+// use state with object
+const demoUseStateHookWithObject = ReactDOM.createRoot(document.getElementById("demo-user-state-hook-with-object"));
+demoUseStateHook.render(<DemoUseStateWithObject/>);
+
+// react effect hook
+const reactEffectHook = ReactDOM.createRoot(document.getElementById("react-effect"));
+reactEffectHook.render(<HookUseEffect/>);
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
